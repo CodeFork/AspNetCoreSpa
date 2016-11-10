@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/Router';
 
-import { routes } from './app.routes';
+import { routing } from './app.routes';
 import { AppService } from './app.service';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
@@ -14,7 +14,7 @@ import { HomeModule } from './home/home.module';
     declarations: [AppComponent],
     imports: [
         BrowserModule,
-        RouterModule.forRoot(routes),
+        routing,
         // FormsModule,
         HttpModule,
         // Only module that app module loads

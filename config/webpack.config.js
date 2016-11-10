@@ -16,8 +16,9 @@ module.exports = merge({
         rules: [
             {
                 test: /\.ts$/, exclude: [/\.(spec|e2e)\.ts$/], loaders: [
-                    'awesome-typescript-loader?forkChecker=true ',
-                    'angular2-template-loader'
+                    'awesome-typescript-loader?forkChecker=true',
+                    'angular2-template-loader',
+                    'angular2-router-loader?aot=true'
                 ]
             },
             { test: /\.html$/, loader: "html" },

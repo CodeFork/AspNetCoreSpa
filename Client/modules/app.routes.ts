@@ -1,8 +1,11 @@
 import { Routes, RouterModule } from '@angular/router';
 
-export const routes: Routes = [
+const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   // Lazy async modules
+  // {
+  //   path: 'login', loadChildren: './+login/login.module#LoginModule'
+  // },
   {
     path: 'login', loadChildren: () => new Promise(resolve => {
       (require as any).ensure([], (require: any) => {
@@ -40,4 +43,4 @@ export const routes: Routes = [
   }
 ];
 
-export const routing = RouterModule.forRoot(routes);
+export { routes };

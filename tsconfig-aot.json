@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    // Rollup can only Tree Shake ES2015 modules which have import and export statements.
+    "module": "es2015",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true
+  },
+  "files": [
+    "Client/modules/app.module.ts",
+    "Client/boot-client.ts"
+  ],
+  "angularCompilerOptions": {
+    // "genDir" property tells the compiler to store the compiled output files in a new aot folder.
+    "genDir": "aot",
+    //  The "skipMetadataEmit" : true property prevents the compiler from generating metadata files with the compiled application. 
+    // Metadata files are not necessary when targeting TypeScript files, so there is no reason to include them
+    "skipMetadataEmit": true
+  }
+}

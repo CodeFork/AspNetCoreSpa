@@ -1,5 +1,5 @@
-import { Injectable }   from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Injectable } from '@angular/core';
+import { FormControl, FormGroup, Validators, ValidatorFn } from '@angular/forms';
 
 import { ControlBase } from './control-base';
 import { ValidationService } from './validation.service';
@@ -12,7 +12,7 @@ export class FormControlService {
         let group: any = {};
 
         controls.forEach(control => {
-            let validators = [];
+            let validators: ValidatorFn[] = [];
             // Required
             if (control.required) {
                 validators.push(Validators.required);

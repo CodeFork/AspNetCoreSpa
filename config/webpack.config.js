@@ -14,7 +14,12 @@ module.exports = merge({
     },
     module: {
         rules: [
-            { test: /\.ts$/, exclude: [/\.(spec|e2e)\.ts$/], loaders: ['awesome-typescript-loader?forkChecker=true ', 'angular2-template-loader'] },
+            {
+                test: /\.ts$/, exclude: [/\.(spec|e2e)\.ts$/], loaders: [
+                    'awesome-typescript-loader?forkChecker=true ',
+                    'angular2-template-loader'
+                ]
+            },
             { test: /\.html$/, loader: "html" },
             { test: /\.css/, loader: extractCSS.extract(['css']) },
             { test: /\.scss$/, loaders: ['raw-loader', 'sass-loader?sourceMap'] },
